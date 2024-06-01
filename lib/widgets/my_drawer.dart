@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../pages/home_page.dart';
-import '../pages/settings_page.dart';
+import '../pages/treino_page.dart';
 import '../pages/contact_pages.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
@@ -33,12 +33,22 @@ class MyDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: const Icon(Icons.settings),
-            title: const Text('Settings'),
+            leading: const Icon(Icons.fitness_center),
+            title: const Text('Treino'),
             onTap: () {
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => const SettingsPage()),
+                MaterialPageRoute(builder: (context) => const TreinoPage()),
+              );
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.history),
+            title: const Text('Historico'),
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const ContactPage()),
               );
             },
           ),
