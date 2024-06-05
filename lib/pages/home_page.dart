@@ -11,8 +11,13 @@ class HomePage extends StatelessWidget {
         title: const Text('Home Page'),
       ),
       drawer: const MyDrawer(),
-      body: const Center(
-        child: Text('Home Page Content'),
+      body: Center(
+        child: Column(
+          children: [
+            Image.asset("images/treino.png", width: 900, height: 900,),
+            const Text('Home Page Content'),
+          ],
+        ),
       ),
     );
   }
